@@ -4,49 +4,49 @@ const autoprefixer = require('autoprefixer');
 const minimist = require('minimist');
 const browserSync = require('browser-sync').create();
 const { envOptions } = require('./envOptions');
-var ghPages = require('gulp-gh-pages');
+const gulpLivereload = require('gulp-livereload');
+const connect = require('gulp-connect');
 
 let options = minimist(process.argv.slice(2), envOptions);
 //現在開發狀態
 console.log(`Current mode：${options.env}`);
 
 
-function initGhPages(){
-  return gulp.src('build/**/*').pipe(ghPages());
-}
-
 function copyFile() {
-  return gulp.src(envOptions.copyFile.src)
-  .pipe(gulp.dest(envOptions.copyFile.path))
-  .pipe(
-    browserSync.reload({
-      stream: true,
-    }),
-  );
+  return gulp
+    .src(envOptions.copyFile.src)
+    .pipe(gulp.dest(envOptions.copyFile.path))
+    .pipe(
+      browserSync.reload({
+        stream: true
+      })
+    )
+    .pipe(gulpLivereload());
 }
 
 function layoutHTML() {
-  return gulp.src(envOptions.html.src)
+  return gulp
+    .src(envOptions.html.src)
     .pipe($.plumber())
     .pipe($.frontMatter())
     .pipe(
-      $.layout((file) => {
+      $.layout(file => {
         return file.frontMatter;
       })
     )
     .pipe(gulp.dest(envOptions.html.path))
     .pipe(
       browserSync.reload({
-        stream: true,
-      }),
-    );
+        stream: true
+      })
+    )
+    .pipe(gulpLivereload());
 }
 
 function sass() {
-  const plugins = [
-    autoprefixer(),
-  ];
-  return gulp.src(envOptions.style.src)
+  const plugins = [autoprefixer()];
+  return gulp
+    .src(envOptions.style.src)
     .pipe($.sourcemaps.init())
     .pipe($.sass().on('error', $.sass.logError))
     .pipe($.postcss(plugins))
@@ -54,59 +54,62 @@ function sass() {
     .pipe(gulp.dest(envOptions.style.path))
     .pipe(
       browserSync.reload({
-        stream: true,
-      }),
-    );
+        stream: true
+      })
+    )
+    .pipe(gulpLivereload());
 }
 
 function babel() {
-  return gulp.src(envOptions.javascript.src)
+  return gulp
+    .src(envOptions.javascript.src)
     .pipe($.sourcemaps.init())
-    .pipe($.babel({
-      presets: ['@babel/env'],
-    }))
+    .pipe(
+      $.babel({
+        presets: ['@babel/env']
+      })
+    )
     .pipe($.concat(envOptions.javascript.concat))
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest(envOptions.javascript.path))
     .pipe(
       browserSync.reload({
-        stream: true,
-      }),
-    );
+        stream: true
+      })
+    )
+    .pipe(gulpLivereload());
 }
 
 function vendorsJs() {
-  return gulp.src(envOptions.vendors.src)
-    .pipe($.concat(envOptions.vendors.concat))
-    .pipe(gulp.dest(envOptions.vendors.path));
+  return gulp.src(envOptions.vendors.src).pipe($.concat(envOptions.vendors.concat)).pipe(gulp.dest(envOptions.vendors.path));
 }
-
 
 function browser() {
   browserSync.init({
     server: {
-      baseDir: envOptions.browserDir,
+      baseDir: envOptions.browserDir
     },
-    port: 8080,
+    port: 8080
   });
 }
 
 function clean() {
-  return gulp.src(envOptions.clean.src, {
+  return gulp
+    .src(envOptions.clean.src, {
       read: false,
-      allowEmpty: true,
+      allowEmpty: true
     })
     .pipe($.clean());
 }
 
 function deploy() {
-  return gulp.src(envOptions.deploySrc)
-    .pipe($.ghPages());
+  return gulp.src(envOptions.deploySrc).pipe($.ghPages());
 }
 
 function watch() {
   gulp.watch(envOptions.html.src, gulp.series(layoutHTML));
   gulp.watch(envOptions.html.ejsSrc, gulp.series(layoutHTML));
+  gulp.watch(envOptions.style.src, gulp.series(sass));
   gulp.watch(envOptions.javascript.src, gulp.series(babel));
   gulp.watch(envOptions.img.src, gulp.series(copyFile));
 }
@@ -115,6 +118,6 @@ exports.deploy = deploy;
 
 exports.clean = clean;
 
-exports.build = gulp.series(clean, copyFile, layoutHTML, sass, babel, vendorsJs,initGhPages);
+exports.build = gulp.series(clean, copyFile, layoutHTML, sass, babel, vendorsJs);
 
 exports.default = gulp.series(clean, copyFile, layoutHTML, sass, babel, vendorsJs, gulp.parallel(browser, watch));

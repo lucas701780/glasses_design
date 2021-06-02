@@ -1,23 +1,26 @@
-$color: #00cc99;
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/_mixins";
+@import './bootstrap/variables';
 
-.header {
-  height: 200px;
-  background-color: #00cc99;
-}
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+// 變數設定
+@import './\ variable';
+// reset設定
+@import './\ reset';
+// 常用工具
+@import './mixin'; 
+// 斷點設定
+@import './grid';
+// 工具類 class(.mb-1、.pr-3)
+@import './utilities';
+// 全域設定
+@import './base';
 
-.footer {
-  height: 200px;
-  background-color: #00cc99;
-}
+// layout 共同框架
+@import './layout/header';
+@import './layout/footer';
 
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  display: flex;
-  transition: all 0.5s;
-  &:hover {
-    width: 200px;
-    background-color: $color;
-  }
-}
+@import './pages/index.scss';
+
+
+
