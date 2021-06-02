@@ -1,34 +1,7 @@
-$pc-media: 960px;
-$pcs-media: 959px;
-$pad-media: 760px;
-$pads-media: 759px;
-$phone-media: 480px;
-$phones-media: 479px;
-
-/*把變數帶入mixin中，此mixin只就單純把media queries寫到我的mixin中，
-並且使用我上面設立的變數來調動media queries的width*/
-
-//電腦
-@mixin pc-width() {
-  @media all and (min-width: $pc-media) {
-    @content;
-  }
-}
-//平板
-@mixin pad-width() {
-  @media all and (min-width: $pad-media) and (max-width: $pcs-media) {
-    @content;
-  }
-}
-//小平板
-@mixin small-pad-width() {
-  @media all and (min-width: $phone-media) and (max-width: $pads-media) {
-    @content;
-  }
-}
-//手機
-@mixin phone-width() {
-  @media all and (max-width: $phones-media) {
-    @content;
-  }
-}
+$primary: #AA0601;
+// $secondary:#650300;
+$bgColor:#AA06010D;
+$font-m:16px;
+$font-s: $font-m * 1.25rem;
+$font-l: $font-m * 2.25rem;
+$font-xl: $font-m * 4rem
