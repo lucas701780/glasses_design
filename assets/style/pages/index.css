@@ -1,0 +1,24 @@
+.banner {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: right; }
+
+.banner-description {
+  padding-top: 360px;
+  font-size: 36px;
+  line-height: 50px; }
+
+.banner-slogan {
+  font-size: 64px;
+  padding-bottom: 350px;
+  line-height: 90px; }
+
+/*# sourceMappingURL=index.css.map */
