@@ -1,26 +1,26 @@
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "../../../node_modules/bootstrap/scss/_mixins";
 @import './bootstrap/variables';
-
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
 // 變數設定
-@import './\ variable';
+@import './\ m_variable';
 // reset設定
-@import './\ reset';
+@import './\ m_reset';
 // 常用工具
-@import './mixin'; 
+@import './m_mixin'; 
 // 斷點設定
-@import './grid';
+@import './m_grid';
 // 工具類 class(.mb-1、.pr-3)
-@import './utilities';
+@import './m_utilities';
 // 全域設定
-@import './base';
+@import './m_base';
 
 // layout 共同框架
 @import './layout/header';
 @import './layout/footer';
 
-@import './pages/index.scss';
+@import './pages/_index.scss';
 
 
 

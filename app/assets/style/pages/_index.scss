@@ -1,0 +1,46 @@
+.banner {
+  background-image: url('https://raw.githubusercontent.com/lucas701780/gulp_glasses_design/main/app/assets/images/68/68.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: right;
+}
+.banner-description {
+  margin-top: 360px;
+  font-size: 36px;
+  line-height: 50px;
+  color: $m-secondary;
+}
+.banner-slogan {
+  font-size: 64px;
+  margin-bottom: 350px;
+  line-height: 90px;
+}
+
+.intro {
+  background-color: $m-bg-color;
+  padding-top: 64px;
+  padding-bottom:80px;
+  text-align: center;
+  h3 {
+    padding-bottom: 60px;
+  }
+}
+.intro-item {
+  padding:0px 37px;
+  img {
+    width: 100px;
+    height: 100px;
+    margin-bottom:40px;
+  }
+  h4{
+    padding-bottom:8px;
+  }
+  p{
+    text-align:left;
+    line-height:1.5rem;
+  }
+}

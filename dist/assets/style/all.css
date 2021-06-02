@@ -9795,6 +9795,18 @@ image {
   max-width: 1200px;
   margin: 0 auto; }
 
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+  color: #650300; }
+
+h2, .h2 {
+  font-size: 64px; }
+
+h3, .h3 {
+  font-size: 48px; }
+
+h4, .h4 {
+  font-size: 24px; }
+
 a {
   color: white;
   text-decoration: none; }
@@ -9814,10 +9826,10 @@ a {
   padding: 40px 32px 40px 32px; }
 
 .header-item:hover {
-  background-color: #6c757d; }
+  background-color: #650300; }
 
 .banner {
-  background-image: url("../../images/68@2x.png");
+  background-image: url("https://raw.githubusercontent.com/lucas701780/gulp_glasses_design/main/app/assets/images/68/68.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -9831,13 +9843,34 @@ a {
   text-align: right; }
 
 .banner-description {
-  padding-top: 360px;
+  margin-top: 360px;
   font-size: 36px;
-  line-height: 50px; }
+  line-height: 50px;
+  color: #650300; }
 
 .banner-slogan {
   font-size: 64px;
-  padding-bottom: 350px;
+  margin-bottom: 350px;
   line-height: 90px; }
+
+.intro {
+  background-color: #AA06010D;
+  padding-top: 64px;
+  padding-bottom: 80px;
+  text-align: center; }
+  .intro h3, .intro .h3 {
+    padding-bottom: 60px; }
+
+.intro-item {
+  padding: 0px 37px; }
+  .intro-item img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 40px; }
+  .intro-item h4, .intro-item .h4 {
+    padding-bottom: 8px; }
+  .intro-item p {
+    text-align: left;
+    line-height: 1.5rem; }
 
 /*# sourceMappingURL=all.css.map */

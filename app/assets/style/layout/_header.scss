@@ -3,7 +3,7 @@ a {
   text-decoration: none;
 }
 .header-wrap {
-  background-color: $primary;
+  background-color: $m-primary;
 }
 .header {
   padding: 0px 88px;
@@ -20,5 +20,5 @@ a {
 }
 
 .header-item:hover{
-  background-color:$secondary;
+  background-color:$m-secondary;
 }
