@@ -9787,7 +9787,7 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-image {
+img {
   max-width: 100%;
   height: auto; }
 
@@ -9795,8 +9795,14 @@ image {
   max-width: 1200px;
   margin: 0 auto; }
 
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif; }
+
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-  color: #650300; }
+  color: #650300;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-weight: medium; }
 
 h2, .h2 {
   font-size: 64px; }
@@ -9857,7 +9863,8 @@ a {
   background-color: #AA06010D;
   padding-top: 64px;
   padding-bottom: 80px;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 64px; }
   .intro h3, .intro .h3 {
     padding-bottom: 60px; }
 
@@ -9872,5 +9879,37 @@ a {
   .intro-item p {
     text-align: left;
     line-height: 1.5rem; }
+
+.product-title {
+  text-align: center;
+  margin-bottom: 60px; }
+
+.product-section-title {
+  color: #aa0601;
+  font-style: italic;
+  font-weight: 900; }
+
+.croscover {
+  background-image: url("https://raw.githubusercontent.com/lucas701780/gulp_glasses_design/main/app/assets/images/68/68.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: right; }
+
+.croscover-container {
+  max-width: 1530px;
+  margin: 0 auto; }
+
+.croscover-title {
+  text-align: center;
+  color: white;
+  margin: 64px 0px 60px 0px; }
 
 /*# sourceMappingURL=all.css.map */
