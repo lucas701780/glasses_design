@@ -5586,7 +5586,7 @@ a {
   background-color: #650300; }
 
 .banner {
-  background-image: url("https://raw.githubusercontent.com/lucas701780/gulp_glasses_design/main/app/assets/images/68/68.png");
+  background-image: url("../../../assets/images/banner.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
