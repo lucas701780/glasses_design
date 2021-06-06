@@ -7,72 +7,188 @@
   display: flex;
   justify-content: center;
   text-align: right;
+  height: 840px;
+  @include Phone {
+    padding: 0px 48px;
+  }
+  @include iPhone678Plus {
+    padding: 0px 12px;
+    height: 394px;
+  }
 }
 .banner-description {
-  margin-top: 360px;
   font-size: 36px;
   line-height: 50px;
   color: $m-secondary;
+  @include iPhone678Plus {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 .banner-slogan {
-  font-size: 64px;
-  margin-bottom: 350px;
   line-height: 90px;
+  @include iPhone678Plus {
+    line-height: 45px;
+  }
 }
 
 .intro {
   background-color: $m-bg-color;
-  padding-top: 64px;
-  padding-bottom: 80px;
-  text-align: center;
+  padding: 64px 0px 80px 0px;
   margin-bottom: 64px;
+  text-align: center;
+  @include Phone {
+    padding: 40px 0px 80px 0px;
+    margin-bottom: 40px;
+  }
+  @include iPhone678Plus {
+    padding: 32px 0px 56px 0px;
+    margin-bottom: 24px;
+  }
   h3 {
-    padding-bottom: 60px;
+    padding-bottom: 40px;
+    @include iPhone678Plus {
+      padding-bottom: 32px;
+    }
   }
 }
 
+.intro-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include Phone {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 .intro-item {
-  padding: 0px 37px;
+  padding: 16px 36px 24px 36px;
   img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     margin-bottom: 40px;
   }
   h4 {
     padding-bottom: 8px;
   }
   p {
+    max-width: 208px;
     text-align: left;
     line-height: 1.5rem;
   }
 }
 
-.product-title {
-  text-align: center;
-  margin-bottom: 60px;
-}
-.product-section-title {
-  color: #aa0601;
-  font-style: italic;
-  font-weight: 900;
+.product {
+  @include Phone {
+    padding: 0px 48px;
+  }
+  .title {
+    text-align: center;
+    margin-bottom: 60px;
+    @include iPhone678Plus {
+      margin-bottom: 16px;
+    }
+  }
+  .item {
+    display: flex;
+    flex-direction: row;
+    @include iPhone678Plus {
+      position: relative;
+    }
+  }
+  .reverse {
+    flex-direction: row-reverse;
+    @include Phone {
+      flex-direction: row;
+    }
+  }
+
+  .item-image {
+    max-width: 792px;
+    @include Phone {
+      max-width: 410px;
+    }
+  }
+  .section {
+    display: flex;
+    flex-direction: row;
+
+    @include Phone {
+      width: 100%;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      h3 {
+        font-size: 28px;
+      }
+    }
+    @include iPhone678Plus {
+      display: flex;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .section-img {
+      width: 48px;
+      height: 48px;
+      margin-top: 8px;
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      @include Phone {
+        width: 32px;
+        height: 32px;
+      }
+    }
+    .diamond {
+      background-image: url(https://svgshare.com/i/KYc.svg);
+      @include iPhone678Plus {
+        background-image: url(https://svgshare.com/i/KXf.svg);
+      }
+    }
+    .sun {
+      background-image: url(https://svgshare.com/i/KZA.svg);
+      @include iPhone678Plus {
+        background-image: url(https://svgshare.com/i/KZD.svg);
+        color: white;
+      }
+    }
+    .thunder {
+      background-image: url(https://svgshare.com/i/KX8.svg);
+      @include iPhone678Plus {
+        color: white;
+        background-image: url(https://svgshare.com/i/KYY.svg);
+      }
+    }
+    .section-title {
+      color: #aa0601;
+      font-style: italic;
+      font-weight: 900;
+      @include iPhone678Plus {
+        color: white;
+      }
+    }
+  }
 }
 
 .croscover {
-  background-image: url('https://raw.githubusercontent.com/lucas701780/gulp_glasses_design/main/app/assets/images/68/68.png');
+  background-image: url('../images/nick-owuor-astro-nic-visuals-54Q_HvMWtVE-unsplash/nick-owuor-astro-nic-visuals-54Q_HvMWtVE-unsplash.png');
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:cover;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  text-align: right;
+  height:2162px;
+  h3{
+    text-align:center;
+    color:white;
+    padding:64px 0px 60px 0px;
+  }
 }
+
 .croscover-container {
   max-width: 1530px;
   margin: 0 auto;
-}
-.croscover-title {
-  text-align: center;
-  color: white;
-  margin: 64px 0px 60px 0px;
 }

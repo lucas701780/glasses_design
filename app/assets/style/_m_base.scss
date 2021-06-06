@@ -14,10 +14,25 @@ h4 {
 
 h2 {
   font-size: 64px;
+  @include Phone {
+    font-size: 48px;
+  }
+  @include iPhone678Plus {
+    font-size: 32px;
+  }
 }
 h3 {
   font-size: 48px;
+  @include Phone {
+    font-size: 32px;
+  }
+  @include iPhone678Plus {
+    font-size: 24px;
+  }
 }
 h4 {
   font-size: 24px;
+  @include iPhone678Plus {
+    font-size: 20px;
+  }
 }

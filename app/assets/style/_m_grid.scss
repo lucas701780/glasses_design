@@ -4,11 +4,11 @@
   }
 };
 
-@mixin iPad{
-  @media (max-width: 768px){
-    @content
-  }
-};
+// @mixin iPad{
+//   @media (max-width: 768px){
+//     @content
+//   }
+// };
 
 @mixin Phone{
   @media (max-width: 768px){
