@@ -5586,7 +5586,7 @@ a {
   background-color: #650300; }
 
 .banner {
-  background-image: url("./assets/images/banner.png");
+  background-image: url("../../../../dist/assets/images/banner.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
