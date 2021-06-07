@@ -1,11 +1,106 @@
-// padding-left 4px 8px 24px 30px 48px 64px
-// padding-left 23px 62px
-// padding-bottom 4px 8px 16px 20px 24px 32px  40px 80px 144px
-// padding-bottom  29.4px
+/* utils class */
+
+/* flex */
+
+.d-flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-baseline {
+  align-items: baseline;
+}
+.align-items-center {
+  align-items: center;
+}
+
+.pb-5 {
+  padding-bottom: 5rem;
+  @mixin iPad {
+    padding-bottom: 2.5rem;
+  }
+  @mixin iPhone678Plus {
+    padding-bottom: 1.5rem;
+  }
+}
+
+.mr-1 {
+  margin-right: 8px;
+  @mixin iPhone678Plus {
+    margin-right: 0.125rem; // 2px
+  }
+}
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding-right: 12px;
-  padding-left: 12px;
+  @mixin iPad {
+    max-width: 672px;
+    margin: 0 auto;
+  }
+  @mixin iPhone678Plus {
+    max-width: 352px;
+  }
+}
+
+
+/* text */
+
+.text-primary {
+  color: #650300;
+}
+
+.text-secondary{
+  color: #AA0601;
+}
+
+.text-bolder {
+  font-weight: bold;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: white;
+}
+.text-gray {
+  color: #707070;
+}
+
+.bg-cover {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-dark {
+  background-color: #AA0601;
+  color: white;
+}
+
+.bg-light {
+  background-color: #AA06010D;
 }

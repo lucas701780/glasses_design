@@ -1,38 +1,43 @@
-body{
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
-
-}
-h1,
-h2,
-h3,
-h4 {
-  color: $m-secondary;
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-weight: medium;
+/* base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-h2 {
-  font-size: 64px;
-  @include Phone {
-    font-size: 48px;
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft JhengHei', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+img {
+  /* RWD */
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: bolder;
+  @include iPad {
+    h1 {
+      font-size: 3rem;
+    }
   }
-  @include iPhone678Plus {
-    font-size: 32px;
+  @include iPhone678Plus{
+    h1 {
+      font-size: 2rem;
+    }
   }
 }
-h3 {
-  font-size: 48px;
-  @include Phone {
-    font-size: 32px;
-  }
-  @include iPhone678Plus {
-    font-size: 24px;
-  }
-}
-h4 {
-  font-size: 24px;
-  @include iPhone678Plus {
-    font-size: 20px;
-  }
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

@@ -1,194 +1,142 @@
 .banner {
-  background-image: url('https://raw.githubusercontent.com/lucas701780/gulp_glasses_design/main/app/assets/images/68/68.png');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  text-align: right;
+  background-image: url('/assets/images/banner.png');
   height: 840px;
-  @include Phone {
-    padding: 0px 48px;
-  }
-  @include iPhone678Plus {
-    padding: 0px 12px;
-    height: 394px;
-  }
-}
-.banner-description {
-  font-size: 36px;
-  line-height: 50px;
-  color: $m-secondary;
-  @include iPhone678Plus {
-    font-size: 16px;
-    line-height: 22px;
-  }
-}
-.banner-slogan {
-  line-height: 90px;
-  @include iPhone678Plus {
-    line-height: 45px;
-  }
-}
 
-.intro {
-  background-color: $m-bg-color;
-  padding: 64px 0px 80px 0px;
-  margin-bottom: 64px;
-  text-align: center;
-  @include Phone {
-    padding: 40px 0px 80px 0px;
-    margin-bottom: 40px;
-  }
-  @include iPhone678Plus {
-    padding: 32px 0px 56px 0px;
-    margin-bottom: 24px;
-  }
-  h3 {
-    padding-bottom: 40px;
-    @include iPhone678Plus {
-      padding-bottom: 32px;
-    }
-  }
 }
-
-.intro-list {
+.banner-content {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  @include Phone {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-.intro-item {
-  padding: 16px 36px 24px 36px;
-  img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 40px;
-  }
-  h4 {
-    padding-bottom: 8px;
-  }
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
   p {
-    max-width: 208px;
-    text-align: left;
-    line-height: 1.5rem;
+    font-size: 2.25rem;
   }
-}
-
-.product {
-  @include Phone {
-    padding: 0px 48px;
-  }
-  .title {
-    text-align: center;
-    margin-bottom: 60px;
-    @include iPhone678Plus {
-      margin-bottom: 16px;
+  @include iPad {
+    p {
+      font-size: 1.25rem;
     }
   }
-  .item {
-    display: flex;
-    flex-direction: row;
-    @include iPhone678Plus {
-      position: relative;
-    }
-  }
-  .reverse {
-    flex-direction: row-reverse;
-    @include Phone {
-      flex-direction: row;
-    }
-  }
-
-  .item-image {
-    max-width: 792px;
-    @include Phone {
-      max-width: 410px;
-    }
-  }
-  .section {
-    display: flex;
-    flex-direction: row;
-
-    @include Phone {
-      width: 100%;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      h3 {
-        font-size: 28px;
-      }
-    }
-    @include iPhone678Plus {
-      display: flex;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .section-img {
-      width: 48px;
-      height: 48px;
-      margin-top: 8px;
-      background-size: contain;
-      background-position: center center;
-      background-repeat: no-repeat;
-      @include Phone {
-        width: 32px;
-        height: 32px;
-      }
-    }
-    .diamond {
-      background-image: url(https://svgshare.com/i/KYc.svg);
-      @include iPhone678Plus {
-        background-image: url(https://svgshare.com/i/KXf.svg);
-      }
-    }
-    .sun {
-      background-image: url(https://svgshare.com/i/KZA.svg);
-      @include iPhone678Plus {
-        background-image: url(https://svgshare.com/i/KZD.svg);
-        color: white;
-      }
-    }
-    .thunder {
-      background-image: url(https://svgshare.com/i/KX8.svg);
-      @include iPhone678Plus {
-        color: white;
-        background-image: url(https://svgshare.com/i/KYY.svg);
-      }
-    }
-    .section-title {
-      color: #aa0601;
-      font-style: italic;
-      font-weight: 900;
-      @include iPhone678Plus {
-        color: white;
-      }
+  @include iPhone678Plus {
+    p {
+      font-size: 1rem;
     }
   }
 }
 
-.croscover {
-  background-image: url('../images/nick-owuor-astro-nic-visuals-54Q_HvMWtVE-unsplash/nick-owuor-astro-nic-visuals-54Q_HvMWtVE-unsplash.png');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size:cover;
-  width: 100%;
-  height:2162px;
-  h3{
-    text-align:center;
-    color:white;
-    padding:64px 0px 60px 0px;
-  }
-}
+// .banner-description {
+//   font-size: 36px;
+//   line-height: 50px;
+//   color: $m-secondary;
+//   @include iPhone678Plus {
+//     font-size: 16px;
+//     line-height: 22px;
+//   }
+// }
+// .banner-slogan {
+//   line-height: 90px;
+//   @include iPhone678Plus {
+//     line-height: 45px;
+//   }
+// }
 
-.croscover-container {
-  max-width: 1530px;
-  margin: 0 auto;
-}
+// .intro {
+//   background-color: $m-bg-color;
+//   padding: 64px 0px 80px 0px;
+//   margin-bottom: 64px;
+//   text-align: center;
+//   @include Phone {
+//     padding: 40px 0px 80px 0px;
+//     margin-bottom: 40px;
+//   }
+//   @include iPhone678Plus {
+//     padding: 32px 0px 56px 0px;
+//     margin-bottom: 24px;
+//   }
+//   h3 {
+//     padding-bottom: 60px;
+//     @include Phone {
+//       padding-bottom: 20px;
+//     }
+//   }
+// }
+
+// .intro-item {
+//   padding: 16px 37px 24px 37px;
+//   @include Phone {
+//     padding: 12px 50px 12px 50px;
+//   }
+//   img {
+//     width: 80px;
+//     height: 80px;
+//     margin-bottom: 40px;
+//   }
+//   h4 {
+//     padding-bottom: 8px;
+//   }
+//   p {
+//     text-align: left;
+//     line-height: 1.5rem;
+//     max-width: 208px;
+//     @include Phone {
+//       max-width: 224px;
+//     }
+//   }
+// }
+
+// /* product */
+// .product-list li {
+//   display: flex;
+//   margin-bottom: 2rem;
+// }
+
+// .product-list img,
+// .product-img {
+//   width: 60%;
+// }
+
+// .product-list li:nth-child(2) {
+//   justify-content: space-between;
+// }
+
+// .product-list li:last-child {
+//   margin-bottom: 0;
+// }
+
+// .product-list h2 {
+//   font-size: 3rem;
+//   text-transform: uppercase;
+//   display: flex;
+//   align-items: center;
+//   font-style: italic;
+//   font-weight: bolder;
+//   margin-left: 1.5rem;
+// }
+
+// .product-list li:nth-child(2) h2 {
+//   margin-right: 1.5rem;
+// }
+
+// .product-list li:nth-child(2) img {
+//   width: 100%;
+// }
+
+// .product-img {
+//   position: relative;
+// }
+
+// .product-img::before {
+//   content: '';
+//   background: url('/assets/images/product-2-color.png') no-repeat;
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   opacity: 0;
+//   background-size: contain;
+// }
+
+// .product-img:hover::before {
+//   opacity: 1;
+// }

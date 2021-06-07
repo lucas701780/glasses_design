@@ -1,23 +1,17 @@
-a {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  display: block;
-}
 .header {
-  padding: 0px 56px;
-  background-color: $m-primary;
+  padding: 0px 3.5rem;
   justify-content: space-between;
   @include Phone {
-    padding: 0px 28px;
+    padding: 0px 1.75rem;
     position: relative;
   }
   @include iPhone678Plus {
-    padding: 0px 16px;
+    padding: 0px 1rem;
   }
 }
 .logo {
-  max-width: 80px;
+  padding: 1.875rem;
+  align-self: center;
   @include Phone {
     max-width: 48px;
     padding: 10px 0px;
@@ -26,10 +20,20 @@ a {
     transform: translate(-50%, 0%);
   }
 }
+.mobile-menu {
+  position: relative;
+  left: 13px;
+  display: none;
+  @include Phone {
+    padding: 13px;
+    display: block;
+  }
+}
 .menu {
   display: flex;
   flex-direction: row;
   justify-content: end;
+  // height: 100%;
   @include Phone {
     display: block;
     position: absolute;
@@ -41,33 +45,28 @@ a {
     overflow: hidden;
     z-index: 120;
   }
+  li {
+    padding: 2.5rem 2rem;
+    @include Phone {
+      padding: 40px 20px 40px 20px;
+    }
+    @include Phone {
+      text-align: center;
+      line-height: 28px;
+      background: #aa0601;
+      color: #ffffff;
+      padding: 16px;
+      text-decoration: none;
+      border-top: 1px solid #ffffff;
+    }
+    a {
+      font-size: 1.25rem;
+    }
+  }
+  li:hover {
+    background-color: $m-secondary;
+  }
 }
 .menu.active {
-  max-height: 300px;
-}
-.mobile-menu {
-  display: none;
-  padding: 13px 0px;
-  max-width: 24px;
-  @include Phone {
-    display: block;
-  }
-}
-.menu-item {
-  padding: 40px 32px 40px 32px;
-  @include Phone {
-    padding: 40px 20px 40px 20px;
-  }
-  @include Phone {
-    text-align: center;
-    line-height:28px;
-    background: #aa0601;
-    color: #ffffff;
-    border-top: 1px solid #ffffff;
-    padding: 16px;
-    text-decoration: none;
-  }
-}
-.menu-item:hover {
-  background-color: $m-secondary;
+  max-height: 252px;
 }

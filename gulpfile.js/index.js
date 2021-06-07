@@ -1,4 +1,6 @@
 const gulp = require('gulp');
+var cssAdjustUrlPath = require('gulp-css-adjust-url-path');
+
 const $ = require('gulp-load-plugins')({ lazy: false });
 const autoprefixer = require('autoprefixer');
 const minimist = require('minimist');
@@ -45,12 +47,14 @@ function layoutHTML() {
 
 function sass() {
   const plugins = [autoprefixer()];
+
   return gulp
     .src(envOptions.style.src)
     .pipe($.sourcemaps.init())
     .pipe($.sass().on('error', $.sass.logError))
     .pipe($.postcss(plugins))
     .pipe($.sourcemaps.write('.'))
+    .pipe(cssAdjustUrlPath(/(url\(['"]?)[/]?(assets)/g))
     .pipe(gulp.dest(envOptions.style.path))
     .pipe(
       browserSync.reload({

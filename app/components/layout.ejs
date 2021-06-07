@@ -11,27 +11,25 @@
     <link rel="stylesheet" href="./assets/style/all.css" />
   </head>
   <body>
-    <header class="header d-flex">
-      <h1  class="logo align-self-center">
+    <header class="header d-flex bg-dark">
+      <a href="#" class="mobile-menu">
+        <img src="./assets/images/icon-menu.svg" alt="">
+      </a>
+      <div class="logo">
         <a href="">
-          <img
-            src="https://raw.githubusercontent.com/lucas701780/gulp_glasses_design/main/app/assets/images/logo-new_%E5%B7%A5%E4%BD%9C%E5%8D%80%E5%9F%9F%201/logo-new_%E5%B7%A5%E4%BD%9C%E5%8D%80%E5%9F%9F%201%402x.png"
-            alt=""/>
+          <img src="./assets/images/logo.png" alt="" />
         </a>
-      </h1>
+      </div>
       <nav>
-        <a href="#" class="mobile-menu" >
-          <img src="https://raw.githubusercontent.com/lucas701780/gulp_glasses_design/1519c08cf489afdecb97cb161b7f7b666431927d/app/assets/images/ic_menu_24px.svg" alt="">
-        </a>
         <ul class="menu">
-          <li class="menu-item"><a href="">系列鏡框</a></li>
-          <li class="menu-item"><a href="">門市據點</a></li>
-          <li class="menu-item"><a href="">部落格</a></li>
-          <li class="menu-item"><a href="">常見問題</a></li>
+          <li><a href="">系列鏡框</a></li>
+          <li><a href="">門市據點</a></li>
+          <li><a href="">部落格</a></li>
+          <li><a href="">常見問題</a></li>
         </ul>
       </nav>
     </header>
-    <%- contents %>
+    <main><%- contents %></main>
     <footer class="footer"></footer>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
