@@ -26,14 +26,10 @@ h1 {
   font-size: 4rem;
   font-weight: bolder;
   @include iPad {
-    h1 {
-      font-size: 3rem;
-    }
+    font-size: 3rem;
   }
-  @include iPhone678Plus{
-    h1 {
-      font-size: 2rem;
-    }
+  @include iPhone678Plus {
+    font-size: 2rem;
   }
 }
 
