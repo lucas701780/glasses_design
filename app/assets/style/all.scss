@@ -11,11 +11,16 @@
 // 全域設定
 @import './m_base';
 
+@import './_modules.scss';
+
 // layout 共同框架
 @import './layout/header';
 @import './layout/footer';
 
 @import './pages/_index.scss';
 @import './pages/_series-menu.scss';
-
-
+@import './pages/_location.scss';
+@import './pages/_location-detail.scss';
+@import './pages/_blog.scss';
+@import './pages/_blog-detail.scss';
+@import './pages/_faq.scss';

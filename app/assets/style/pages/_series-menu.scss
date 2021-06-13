@@ -2,8 +2,10 @@
   @include iPad {
     margin: 0;
     max-width: 100%;
+    padding: 0;
   }
 }
+
 .series-menu li {
   position: relative;
   border-left: 1px solid #dcdcdc;
@@ -90,7 +92,6 @@
   background-size: cover;
   background-position: center center;
   height: 309px;
-  margin-right: 1.5rem;
 }
 .optical-glasses-2 {
   background-image: url('/assets/images/banner-2.png');
@@ -138,28 +139,37 @@
   }
 }
 
+.optical-products nav{
+  margin-bottom: 5.5rem;
+  @include iPad {
+    margin-bottom: 3.3125rem;
+  }
+  @include iPhone678Plus {
+    margin-bottom: 2.5rem;
+  }
+}
+
 .optical-product-list {
   li {
     width: 25%;
     margin-bottom: 1.5rem;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
     @include iPad {
       width: 50%;
       padding-right: 1.5rem;
     }
     @include iPhone678Plus {
       width: 100%;
-      padding: 0 1rem;
+      padding: 0rem;
     }
   }
   img {
     width: 100%;
   }
   flex-wrap: wrap;
-  margin-bottom: 5.5rem;
+  margin-bottom: 3.3125rem;
   @include iPad {
-    margin-bottom: 3.3125rem;
   }
   @include iPhone678Plus {
     margin-bottom: 2.5rem;
@@ -185,104 +195,3 @@
   }
 }
 
-// Bootstrap Components
-.pagination {
-  margin-bottom: 168px;
-  @include iPad {
-    margin-bottom: 104px;
-  }
-  @include Phone {
-    margin-bottom: 56px;
-  }
-}
-.page-link {
-  position: relative;
-  display: block;
-  padding: 0.5rem 0.75rem;
-  margin-left: -1px;
-  line-height: 1.25;
-  color: #000;
-  background-color: #fff;
-  border: 1px solid #000;
-}
-
-.page-link:hover {
-  z-index: 2;
-  color: #fff;
-  text-decoration: none;
-  background-color: #000;
-  border-color: #000;
-}
-
-.page-link:focus {
-  z-index: 2;
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
-
-.page-link:not(:disabled):not(.disabled) {
-  cursor: pointer;
-}
-
-.page-item:first-child .page-link {
-  margin-left: 0;
-}
-
-.page-item:last-child .page-link {
-  background-color: #f2f2f2;
-}
-.page-item:last-child .page-link:hover {
-  background-color: #000;
-}
-
-.page-item.disabled .page-link {
-  color: #6c757d;
-  pointer-events: none;
-  cursor: auto;
-  background-color: #fff;
-  border-color: #000;
-}
-
-.pagination-lg .page-link {
-  padding: 9px 14px;
-  font-size: 19px;
-  line-height: 1.5;
-}
-@media (max-width: 767px) {
-  .pagination-lg .page-link {
-    padding: 9px;
-  }
-}
-
-.pagination-lg .page-item:first-child .page-link {
-  padding: 9px 11px;
-}
-@media (max-width: 767px) {
-  .pagination-lg .page-item:first-child .page-link {
-    padding: 9px;
-  }
-}
-
-.pagination-lg .page-item:nth-child(2) .page-link {
-  padding: 9px 15px;
-}
-@media (max-width: 767px) {
-  .pagination-lg .page-item:nth-child(2) .page-link {
-    padding: 9px 10px;
-  }
-}
-
-.pagination-lg .page-item:last-child .page-link {
-  padding: 9px 11px;
-}
-@media (max-width: 767px) {
-  .pagination-lg .page-item:last-child .page-link {
-    padding: 9px;
-  }
-}
-
-.pagination-sm .page-link {
-  padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
-  line-height: 1.5;
-}

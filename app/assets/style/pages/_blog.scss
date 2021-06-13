@@ -1,0 +1,221 @@
+.blog-bg {
+  background-color: #650300;
+
+  @include iPhone678Plus {
+    background-color: white;
+  }
+}
+.blog-bg .container {
+  @include iPhone678Plus {
+    margin: 0;
+    max-width: 100%;
+  }
+}
+.blog-nav {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding: 0.6875rem 0;
+  @include iPhone678Plus {
+    padding: 0;
+    display: block;
+    background-color: white;
+    color: black;
+  }
+}
+
+.blogl-menu-list {
+  display: flex;
+  @include iPhone678Plus {
+    display: block;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.8s;
+    text-align: center;
+  }
+}
+
+.blogl-menu-list li {
+  font-weight: bold;
+  margin-right: 3rem;
+  @include iPad {
+    margin-right: 2rem;
+  }
+  @include iPhone678Plus {
+    padding: 0.875rem;
+    border: 1px solid #00000020;
+    margin-right: 0;
+  }
+}
+.blogl-menu-search {
+  @include iPhone678Plus {
+    display: none;
+  }
+}
+.blogl-menu-list.active {
+  @include iPhone678Plus {
+    max-height: 300px;
+  }
+}
+
+.blog-nav {
+  .blog-dropdown-up {
+    @include iPhone678Plus {
+      display: none;
+    }
+  }
+  .blog-dropdown-down {
+    @include iPhone678Plus {
+      display: block;
+    }
+  }
+}
+
+.blog-nav.active {
+  .blog-dropdown-up {
+    @include iPhone678Plus {
+      display: block;
+    }
+  }
+  .blog-dropdown-down {
+    @include iPhone678Plus {
+      display: none;
+    }
+  }
+}
+
+.blog-mobile-menu {
+  display: none;
+  @include iPhone678Plus {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #000000;
+  }
+}
+
+.blog-list {
+  margin: 5.5rem 0;
+  @include iPad {
+    margin: 2.5rem 0;
+  }
+  @include iPhone678Plus {
+    margin: 1.5rem 0;
+  }
+}
+.blog-list-item {
+  margin-bottom: 3.75rem;
+  display: flex;
+
+  img {
+    // width: 50%;
+    padding-right: 1.5rem;
+    @include iPad {
+    }
+    @include iPhone678Plus {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+  @include iPad {
+    margin-bottom: 2rem;
+  }
+  @include iPhone678Plus {
+    margin-bottom: 1.5rem;
+    flex-direction: column;
+  }
+}
+.blog-list-item-body {
+  width: 50%;
+  @include iPad {
+    width: 80%;
+  }
+  h3 {
+    font-size: 2rem;
+    color: #650300;
+    @include iPad {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.blog-list-item-body-subtitle {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2.5rem;
+  @include iPad {
+    padding-bottom: 1rem;
+  }
+  span {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #000;
+    @include iPad {
+      font-size: 1rem;
+    }
+    @include iPhone678Plus {
+      font-size: 0.875rem;
+    }
+  }
+  p {
+    font-size: 1rem;
+    opacity: 0.7;
+    align-self: center;
+    @include iPad {
+      font-size: 0.875rem;
+    }
+  }
+}
+.blog-small-more {
+  display: none;
+  @include iPad {
+    display: inline-block;
+    font-weight: bold;
+  }
+}
+
+.blog-list-item-content {
+  padding-bottom: 2rem;
+  line-height: 1.875rem;
+  color: #555555;
+  text-align: justify;
+  @include iPad {
+    font-size: 0.875rem;
+    padding-bottom: 0;
+    line-height: 1.2rem;
+  }
+  @include iPhone678Plus {
+    display: none;
+  }
+}
+
+.blog-more {
+  display: flex;
+  flex-direction: row-reverse;
+  span {
+    font-size: 2.25rem;
+    align-self: flex-end;
+  }
+  img {
+    width: 24px;
+    padding-right: 0px;
+  }
+  @include iPad {
+    display: none;
+  }
+}
+
+.blog-more:hover {
+  & img {
+    transform: translate(5px, 0px);
+  }
+}
+
+.blog-page {
+  margin-bottom: 9.75rem;
+  @include iPad {
+    margin-bottom: 6.5rem;
+  }
+  @include iPhone678Plus {
+    margin-bottom: 3.5rem;
+  }
+}

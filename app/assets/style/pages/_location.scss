@@ -1,0 +1,137 @@
+.location {
+  background-image: url('/assets/images/qa.png');
+  height: 304px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include Phone {
+    height: 143px;
+  }
+}
+
+.location-banner h2 {
+  font-size: 4rem;
+  margin-right: 1.5rem;
+  @include iPad {
+    font-size: 3rem;
+    margin-right: 1rem;
+  }
+  @include Phone {
+    font-size: 1.75rem;
+    margin-right: 0.5rem;
+  }
+}
+
+.location-banner img {
+  width: 40px;
+  @include iPad {
+    width: 30px;
+  }
+  @include Phone {
+    width: 17px;
+  }
+}
+
+.store-location {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  @include iPad {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  @include Phone {
+    margin-bottom: 1rem;
+  }
+  label {
+    align-self: center;
+    padding-right: 1rem;
+    font-size: 1.5rem;
+    @include iPad {
+      width: 14.8125rem;
+    }
+    @include Phone {
+      width: 5rem;
+      padding-right: 0rem;
+      font-size: 0.875rem;
+    }
+  }
+  select {
+    width: 16.625rem;
+    padding: 10px 19px;
+    appearance: none;
+    background-image: url('/assets/images/icon-up-down-arrow.png');
+    background-position: 95%;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    border: 1px solid #ced4da;
+    font-size: 20px;
+    color: #495057;
+    @include iPad {
+      // width: 14.8125rem;
+    }
+    @include Phone {
+    }
+  }
+}
+
+.store-list {
+  flex-wrap: wrap;
+  margin-bottom: 9.625rem;
+  @include iPad{
+    margin-bottom: 6.5rem;
+  }
+  @include iPhone678Plus {
+    margin-bottom: 3.5rem;
+  }
+  h4 {
+    border: 1px solid #00000020;
+    font-size: 1.5rem;
+    padding: 1rem 0px 1rem 1rem;
+  }
+  .store-list-item {
+    width: 25%;
+    // padding-right: 1.5rem;
+    padding:0 0.5rem;
+    margin-bottom: 1.5rem;
+    @include iPad{
+      width: 50%;
+      padding:0 0.6875rem;
+    }
+    @include iPhone678Plus {
+      padding:0;
+      width: 100%;
+    }
+  }
+}
+
+.store-info {
+  padding: 1rem;
+  border: 1px solid #00000020;
+  @include iPad{
+    padding: 1rem;
+  }
+  li {
+    padding-bottom: 0.5rem;
+  }
+  :last-child img{
+    padding-left: 3px;
+  }
+}
+
+.store-locate-info-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5625rem;
+}
+
+.more-info{
+  background-color: #000;
+  color:black;
+  padding: 20px 0;
+  font-size: 20px;
+  transition: all 0.5s;
+  color: white;
+  &:hover{
+      background-color: #00000020;
+  }
+}

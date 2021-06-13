@@ -1,0 +1,49 @@
+.location-detail{
+  margin-bottom: 9.75rem;;
+  @include iPad{
+    flex-direction:column;
+    margin-bottom: 6.5rem;
+  }
+  @include Phone{
+    margin-bottom: 3.25rem;;
+  }
+}
+
+.location-detail-item{
+  flex-direction: column;
+  margin-right: 1.5rem;
+  @include iPad{
+    flex-direction:row;
+    margin-right: 0rem;
+  }
+  @include Phone{
+    flex-direction:column;
+  }
+}
+
+.location-detail .store-list{
+  margin-bottom: 2rem;;
+}
+.location-detail-item-img{
+  @include iPad{
+    width: 50%;
+    padding-right: 1.5rem;
+    margin-bottom: 2rem;;
+  }
+  @include Phone {
+    width: 100%;
+    padding: 0 ;
+  }
+}
+
+.location-detail-item-map{
+  img {
+    height: 423px;
+    @include iPad{
+      width: 100%;
+      height: auto;
+    }
+  }
+  @include Phone{
+  }
+}

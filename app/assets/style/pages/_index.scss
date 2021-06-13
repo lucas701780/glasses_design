@@ -419,6 +419,10 @@
 }
 .contact-form-group {
   margin-bottom: 1rem;
+  align-items:baseline;
+  @include Phone{
+    align-items:center;
+  }
 }
 .contact-form-group input, .contact-form-group textarea {
   display: block;

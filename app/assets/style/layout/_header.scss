@@ -6,7 +6,7 @@
     position: relative;
   }
   @include iPhone678Plus {
-    padding: 0px 1rem;
+    padding: 0px 0rem;
   }
 }
 .logo {
@@ -45,8 +45,9 @@
     overflow: hidden;
     z-index: 120;
   }
-  li {
-    padding: 2.5rem 2rem;
+  a {
+    display: block;
+    padding: 2.7rem 2rem;
     @include Phone {
       padding: 40px 20px 40px 20px;
     }
@@ -59,9 +60,9 @@
       text-decoration: none;
       border-top: 1px solid #ffffff;
     }
-    a {
-      font-size: 1.25rem;
-    }
+    // a {
+    //   font-size: 1.25rem;
+    // }
   }
   li:hover {
     background-color: $m-secondary;
